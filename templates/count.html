@@ -1,0 +1,21 @@
+<style>
+h1{
+    color:indigo;
+}
+h2{
+    color:darkorchid;
+}
+</style>
+
+<h1>Count Result</h1>
+<a href="{% url 'home' %}">Start Over</a>
+<h2>There are {{ count }} words in your text.</h2>
+<h2>Original Text:</h2>
+<p >{{ fulltext }}</p>
+<h2>Word count:</h2>
+
+{% for word, total in wordcounts %}
+    {{ word }}
+    {{ total }}     <br>
+{% endfor %}
+<br>
